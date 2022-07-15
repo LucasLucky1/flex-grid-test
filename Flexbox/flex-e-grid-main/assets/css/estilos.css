@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
 body{
     background: #1D232A;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans','icones', sans-serif;
     color: #ffffff;
     
 }
+
+/*Cabecalho*/
 .cabecalho{
     display: flex;
     justify-content: space-between;
@@ -13,3 +19,89 @@ body{
     padding: 8px 16px;
 
 }
+
+.cabecalho-menu i::after{
+    content: "\e904";
+    font-size: 24px;
+}
+
+.cabecalho-imagem{
+    width: 40px;
+
+}
+
+.cabecalho-notificacao i::before{
+    content: "\e906";
+    font-size: 24px;
+
+}   
+
+/*Barra de navegação*/
+.navegacao {
+    display: flex;
+    flex-direction: column;
+    background: #15191C;
+    width: 75vw;
+    height: 100vh;
+    position: absolute;
+    left: -100vw;
+    transition: 0.25s;
+}
+
+.navegacao-logo{
+    width: 118px;
+    align-self: center;
+    padding: 16px;
+}
+
+.navegacao-link{
+    height: 64px;
+    color: #95999C;
+    padding-left: 25px;
+    display: flex;
+    align-items:center;
+ 
+}
+
+.navegacao-link::before{
+   
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    padding-right: 24px;
+
+}
+
+/* Icones da barra de navegação*/
+.navegacao-link-inicio::before{
+    content: "\e902";
+}
+.navegacao-link-videos::before{
+    content: "\e90e";
+}
+.navegacao-link-picos::before{
+    content: "\e909";
+}
+.navegacao-link-integrantes::before{
+    content: "\e903";
+}
+.navegacao-link-camisas::before{
+    content: "\e900";
+}
+.navegacao-link-pinturas::before{
+    content: "\e90a";
+}
+
+/*Menu ativo*/
+.menu-ativo{
+    left: 0px;
+    transition: 0.25s;
+}
+
+/*Icone do menu ativo*/
+.link-ativo{
+    color: #ffffff;
+    padding-left: 20px;
+    border-left: solid #ffffff 5px;
+}
+
